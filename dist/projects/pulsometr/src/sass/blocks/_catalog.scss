@@ -1,0 +1,175 @@
+.catalog {
+	padding-bottom: 103px;
+	&__tabs {
+		margin-top: 70px;
+		list-style-type: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 0;
+		padding-left: 0;
+	}
+	&__tab {
+		width: 220px;
+		height: 50px;
+		border: 2px solid #d0d0d0;
+		font-size: 18px;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: #6b6b6b;
+		text-align: center;
+		line-height: 48px;
+		transform: skewX(-25deg);
+		margin: 0 5px;
+		cursor: pointer;
+		transition: 0.5s all;
+		&:hover {
+			box-shadow: 3px 3px 20px $main-color; /* при наведении курсора подсвечивается таб */
+			border: none;
+		}
+
+		div {
+			transform: skewX(25deg);
+		}
+		&_active {
+			color: #fff;
+			background-color: $main-color;
+			border: none;
+		}
+	}
+	&__content {
+		margin-top: 60px;
+		display: none;	
+		justify-content: space-around;
+		flex-wrap: wrap; /* всё, что не помещается переносится на следующую строку */
+		&_active {
+			display: flex;
+		}
+	}
+	&-item {
+		width: 300px;
+		min-height: 440px;
+		border: 2px solid #e8e8e8;
+		padding: 20px 20px 26px;
+		overflow: hidden; /* изначально скрытый класс */
+		margin-bottom: 20px;
+		&__img {
+			display: block;
+			margin: 0 auto;
+			max-width: 100%;
+			height: 200px;
+		}
+		&__subtitle {
+			margin-top: 20px;
+			font-size: 16px;
+			line-height: 16px;
+			font-weight: 700;
+			color: #0d0d0d;
+			text-align: center;
+		}
+		&__descr {
+			margin-top: 16px;
+			font-size: 14px;
+			line-height: 18px;
+			font-weight: 300;
+			color: #0d0d0d;
+			text-align: center;
+		}
+		&__link, &__back {
+			display: block;
+			margin-top: 17px;
+			font-size: 14px;
+			line-height: 14px;
+			font-weight: 500;
+			text-decoration: underline;
+			text-transform: uppercase;
+			color: $main-color;
+			text-align: center;
+			&:hover {
+				color: $main-color;
+			}
+		}
+		&__back {
+			margin: 0;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(calc(-50% - 19px));
+		}
+		hr {
+			margin-top: 19px;
+			margin-bottom: 21px;
+			width: 260px;
+			border-bottom: none;
+			background-color: #e8e8e8;
+		}
+		&__footer {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&__old-price{
+			font-size: 14px;
+			line-height: 14px;
+			font-weight: 300;
+			color: #555555;
+			text-decoration: line-through;
+		}
+		&__price {
+			margin-top: 9px;
+			font-size: 20px;
+			line-height: 20px;
+			font-weight: 700;
+			color: #050505;
+		}
+		&__wrapper {
+			display: flex;
+			width: calc(200% + 40px); /* ширина двух обёрток + их margin */
+		}
+		&__content {
+			width: 50%; /* половина ширины от .wrapper */
+			margin-right: 0px; /* убираем 20 рх, когда элемент не активен */
+			transform: translateX(-100%); /* когда элемент не активен, то он двигается */
+			transition: 0.5s all;
+			&_active {
+				transform: translateX(0%); /* когда элемент активен, то он стоит на месте */
+				margin-right: 20px; /* изначально активный класс будет иметь 20 px */
+			}
+		}
+		&__second {
+			position: relative;
+			width: 50%; /* половина ширины от .wrapper */
+			margin-left: 20px; 
+			transform: translateX(0%); /* когда элемент активен, то он двигается */
+			transition: 0.5s all; /* плавная анимация */
+			padding-right: 20px; /* чтобы можно было выровнять контент */
+			&_active {
+				transform: translateX(-100%); /* когда элемент не активен, то он стоит на месте */
+				margin-left: 0px; /* как в верхнем классе, только наоборот */
+			}
+		}
+		&__list {
+			position: relative;
+			padding-left: 19px; /* 14px до квадратика и 5px сам квадратик */
+			margin-bottom: 0; /* выключаем стандартные стили ul */
+			list-style-type: none;
+			li {
+				position: relative;
+				font-size: 14px;
+				line-height: 1.2;
+				font-weight: 300;
+				color: #555555;
+				margin-bottom: 20px;
+				&:before {
+					content: ''; /* всегда устанавливается в псевдоэлементах */
+					position: absolute;
+					width: 5px;
+					height: 5px;
+					background-color: $main-color;
+					left: -14px; /* сдвигаются квадратики */
+					top: 8px;
+				}
+			}
+		}
+	}
+}

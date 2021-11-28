@@ -1,0 +1,46 @@
+.header {
+    display: grid;
+    min-height: 100px;
+    grid-template-columns: 96px 600px 341px;
+    place-content: space-between;
+    &__menu {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        :last-child {
+            padding-right: 0px;
+            border-right: none;
+        }
+        :first-child {
+            padding-left: 0px;
+        }
+    }
+    &__item {
+        padding-right: 14.5px;
+        border-right: 1px dotted #fff;
+        a {
+            text-decoration: none;
+            &:visited {
+                color: #fff;
+            }
+            &:hover {
+                padding-bottom: 6px;
+                border-bottom: 1.5px solid $color-orange;
+                color: $color-orange;
+                transition: 0.2s all;
+            }
+        }
+    }
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__text {
+        text-align: right;
+    }
+    &__btn {
+        margin: 0;
+    }
+}

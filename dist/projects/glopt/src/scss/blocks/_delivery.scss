@@ -1,0 +1,26 @@
+.delivery {
+    min-height: 619px;
+    padding: 51px 0 57px 0;
+    &__descr {
+        width: 880px;
+    }
+    &__wrapper {
+        margin-top: 37px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 360px);
+        place-content: space-between;
+    }
+    &__item {
+        display: grid;
+        grid-template-rows: 210px minmax(133px, auto);
+        row-gap: 28px;
+    }
+    &__img {
+        display: block;
+        margin: 0 auto;
+        height: 210px;
+    }
+    &__text {
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,35 @@
+.footer {
+    min-height: 121px;
+    background-color: $color-gray;
+    padding: 24px 0;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 96px 600px 341px;
+        column-gap: 51px;
+    }
+    &__subheader {
+        font-weight: 700;
+        margin-top: 20px;
+    }
+    &__policy {
+        display: block;
+        padding: 20px 0;
+        width: 170px;
+        font-weight: 300;
+        &:hover {
+            color: #fff;
+            transition: 0.2s all;
+        }
+    }
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__text {
+        text-align: right;
+    }
+    &__btn {
+        margin: 0;
+    }
+}

@@ -1,0 +1,40 @@
+@import 'libs/fonts.scss';
+@import 'base/variables.scss';
+@import 'base/mixins.scss';
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.divider {
+    width: 148px;
+    height: 1px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: $color-orange;
+}
+
+@import 'blocks/buttons.scss';
+@import 'blocks/promo.scss';
+@import 'blocks/header.scss';
+@import 'blocks/titles.scss';
+@import 'blocks/advantage';
+@import 'blocks/delivery.scss';
+@import 'blocks/agent.scss';
+@import 'blocks/manager.scss';
+@import 'blocks/prices.scss';
+@import 'blocks/consultation.scss';
+@import 'blocks/scheme.scss';
+@import 'blocks/responses.scss';
+@import 'blocks/questions.scss';
+@import 'blocks/map.scss';
+@import 'blocks/footer.scss';
+@import 'blocks/media.scss';

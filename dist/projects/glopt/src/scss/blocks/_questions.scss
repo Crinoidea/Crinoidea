@@ -1,0 +1,44 @@
+.questions {
+    min-height: 438px;
+    padding: 62px 0 79px;
+    background: url(../../img/bg/form.jpg) center center/cover no-repeat;
+    &__wrapper {
+        margin: 0 auto;
+        width: 896px;
+        min-height: 297px;
+        background-color: rgba(255, 255, 255, .7) ;
+    }
+    &__text {
+        height: 68px;
+        background-color: $color-gray;
+        padding: 13px 0;
+        text-transform: uppercase;
+    }
+    &__header {
+        font-weight: 700;
+    }
+    &__subheader {
+        text-align: center;
+        line-height: 10px;
+    }
+    &__form {
+        padding: 17px 40px 25px;
+        @include form;
+        grid-template-rows: 47px 73px 55px;
+        row-gap: 6px;
+    }
+    &__input {
+        @include input;
+    }
+    &__textarea {
+        grid-column: 1/4;
+        border-radius: 10px;
+        border: 1px solid #898989;
+        padding: 17px 30px;
+        resize: none;
+    }
+    &__btn {
+        margin-top: 10px;
+        grid-column: 2/3;
+    }
+}

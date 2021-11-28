@@ -1,0 +1,465 @@
+@media (max-width: 1200px) {
+    .container {
+        width: 960px;
+    }
+    .header {
+        grid-template-columns: 140px 600px 140px;
+        place-content: space-around;
+        &__info {
+            display: none;
+        }
+    }
+    .promo {
+        padding-bottom: 45px;
+        &__text {
+            margin-top: 15px;
+        }
+        &__title {
+            font-size: 60px;
+        }
+        &__subtitle {
+            font-size: 34px;
+        }
+        &__wrapper {
+            column-gap: 16px;
+        }
+        &__about {
+            text-align: center;
+        }     
+    }
+    .advantage {
+        &__wrapper {
+            margin: 31px 20px 0;
+        }
+    }
+    .delivery {
+        &__wrapper {
+            place-content: space-around;
+            row-gap: 30px;
+        }
+        &__item {
+            &:last-child {
+                content: '';
+                grid-column: 1/3;
+            }
+        }
+        &__text {
+            width: 360px;
+            margin: 0 auto;
+        }
+    }
+    .prices {
+        &__wrapper {
+            grid-template-columns: repeat(2, 267px);
+            place-content: center;
+            column-gap: 150px;
+        }
+    }
+    .consultation {
+        &__wrapper {
+            width: 900px;
+        }
+    }
+    .agent {
+        &__descr {
+            width: 900px;
+        }
+    }
+    .manager {
+        &__descr {
+            width: 900px;
+        }
+    }
+    .scheme {
+        &__wrapper {
+            justify-content: space-around;
+        }
+    }
+    .map {
+        &__wrapper {
+            top: 270px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .footer {
+        &__wrapper {
+        grid-template-columns: 140px 420px 320px;
+        place-content: space-around;
+        column-gap: 0;
+        }
+        &__btn {
+            width: 140px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 720px;
+    }
+    .title {
+        &_fs16 {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        &__section-descr {
+            width: 700px;
+        }
+    }
+    .header {
+        grid-template-columns: 96px 341px;
+        place-content: space-between;
+        &__menu {
+            display: none;
+        }
+        &__info {
+            display: block;
+        }
+    }
+    .promo {
+        &__text {
+            font-size: 20px;
+        }
+        &__title {
+            margin-top: 15px;
+            font-size: 48px;
+        }
+        &__subtitle {
+            font-size: 31px;
+        }
+        &__divider {
+            &:before {
+                width: 300px;
+                left: -313px;
+            }
+            &:after {
+                width: 300px;
+
+            }
+        }
+    }
+    .advantage {
+        &__wrapper{
+            margin: 31px 0 0;
+            column-gap: 50px;
+        }
+    }
+    .delivery {
+        &__wrapper {
+            grid-template-columns: 360px;
+            
+        }
+        &__item {
+            &:last-child {
+                grid-column: 1/2;
+            }
+        }
+    }
+    .agent {
+        &__descr {
+            width: 700px;
+        }
+    }
+    .manager {
+        &__descr {
+            width: 700px;
+        }
+    }
+    .prices {
+        &__wrapper {
+            column-gap: 100px;
+        }
+    }
+    .consultation {
+        &__wrapper {
+            width: 700px;
+            grid-template-columns: 270px;
+            grid-template-rows: repeat(3, 47px);
+            row-gap: 10px;
+            min-height: 300px;
+        }
+        &__btn {
+            top: 270px;
+        }
+    }
+    .scheme {
+        &__item {
+            width: 200px;
+            justify-content: space-between;
+        }
+    }
+    .questions {
+        &__wrapper {
+            width: 700px;
+        }
+        &__form {
+            grid-template-columns: 270px 1fr 1fr;
+            grid-template-rows: repeat(3, 47px) 73px 55px;
+            row-gap: 10px;
+        }
+        &__input {
+            grid-column: 1/2;
+        }
+        &__btn {
+            grid-column: 1/4;
+        }
+    }
+    .footer {
+        &__wrapper {
+            grid-template-columns: 96px 350px 180px;
+            place-content: space-between;
+        }
+        &__contacts {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        &__btn {
+            width: 160px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        width: 540px;
+    }
+    .title {
+        &__section-main {
+            font-size: 22px;
+        }
+        &__section-descr {
+            width: 500px;
+            font-size: 19px;
+            line-height: 19px;
+        }
+        &_fs19 {
+            line-height: 24px;
+        }
+    }
+    .btn {
+        cursor: none;
+    }
+    .logo {
+        cursor: none;
+    }
+    .promo {
+        &__title {
+            font-size: 45px;
+            line-height: 45px;
+            margin-top: 20px;
+        }
+        &__text {
+            margin-top: 35px;
+        }
+        &__subtitle {
+            font-size: 23px;
+        }
+        &__divider {
+            &:before {
+                width: 260px;
+                left: -273px;
+            }
+            &:after {
+                width: 260px;
+
+            }
+        }
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 29px;
+        }
+    }
+    .advantage {
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+        &__item {
+            grid-template-columns: 300px;
+            grid-template-rows: 65px 1fr;
+            place-content: center;
+            place-items: center;
+            row-gap: 5px;
+        }
+        &__subheader {
+            text-align: center;
+        }
+        &__descr {
+            text-align: justify;
+            text-align-last: center;
+        }
+    }
+    .agent {
+        &__descr {
+            width: 500px;
+        }
+    }
+    .manager {
+        &__descr {
+            width: 500px;
+        }
+    }
+    .prices {
+        &__wrapper {
+            column-gap: 0px;
+            grid-template-columns: 267px;
+        }
+    }
+    .consultation {
+        &__wrapper {
+            width: 500px;
+        }
+    }
+    .scheme {
+        &__item {
+            width: 230px;
+        }
+    }
+    .responses {
+        &__wrapper {
+            width: 500px;
+        }
+    }
+    .next {
+        right: 150px;
+    }
+    .prev {
+        left: 150px;
+    }
+    .questions {
+        &__wrapper {
+            width: 500px;
+        }
+        &__form {
+            grid-template-columns: 1fr 270px 1fr;
+
+        }
+        &__input {
+            grid-column: 2/3;
+        }
+    }
+    .footer {
+        &__wrapper {
+            grid-template-columns: 96px 200px 180px;
+        }
+        &__subheader {
+            margin-top: 9px;
+        }
+        &__policy {
+            margin-top: 26px;
+            padding: 20px 0 0;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+    .title {
+        &__section-main {
+            font-size: 20px;
+        }
+        &__section-descr {
+            width: 300px;
+            font-size: 15px;
+        }
+        &_fs28 {
+            font-size: 25px;
+        }
+    }
+    .header {
+        grid-template-columns: 1fr;
+        place-items: center;
+        &__contacts {
+            display: none;
+        }   
+    }
+    .promo {
+        &__subtitle {
+            line-height: 27px;
+            margin-top: 20px;
+        }
+        &__divider {
+            &:before {
+                width: 120px;
+                left: -133px;
+            }
+            &:after {
+                width: 120px;
+
+            }
+        }
+        &__wrapper {
+            grid-template-columns: 300px;
+            place-content: center;
+        }
+    }
+    .advantage {
+        &__wrapper {
+            row-gap: 25px;
+        }
+    }
+    .delivery {
+        &__img {
+            width: 100%;
+            height: auto;
+        }
+        &__wrapper {
+            grid-template-columns: 300px;
+            row-gap: 55px;
+        }
+        &__text {
+            width: 100%;
+        }
+        &__item {
+            row-gap: 0px;
+        }
+    }
+    .agent {
+        &__descr {
+            width: 300px;
+        }
+    }
+    .manager {
+        &__descr {
+            width: 300px;
+        }
+    }
+    .consultation {
+        &__wrapper {
+            width: 300px;
+        }
+    }
+    .responses {
+        &__wrapper {
+            width: 300px;
+        }
+    }
+    .next {
+        right: 50px;
+    }
+    .prev {
+        left: 50px;
+    }
+    .questions {
+        &__wrapper {
+            width: 300px;
+        }
+    }
+    .footer {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+        
+        &__subheader {
+            display: none;
+        }
+        &__policy {
+            margin: 0 auto;
+        }
+        &__contacts {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.consultation {
+    min-height: 345px;
+    padding-bottom: 80px;
+    &__wrapper {
+        margin: 0 auto;
+        margin-top: 71px;
+        position: relative;
+        width: 1140px;
+        min-height: 166px;
+        border: 1px solid #898989;
+        z-index: 0;
+        @include form;
+        &:before {
+            @include bg_white;
+            width: 120px;
+            top: -3px;
+        }
+        &:after {
+            @include bg_white;
+            width: 208px;
+            bottom: -3px;
+        }
+    }
+    &__icon {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -51px;
+        z-index: 2;
+    }
+    &__btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 143px;
+        z-index: 2;
+    }
+    &__input {
+        @include input;
+    }
+}

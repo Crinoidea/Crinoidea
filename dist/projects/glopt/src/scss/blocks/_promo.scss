@@ -1,0 +1,57 @@
+.promo {
+    padding: 23px 0 81px 0;
+    min-height: 680px;
+    background: url(../../img/bg/header.jpg) center center/cover no-repeat;
+    &__text {
+        margin-top: 9px;
+    }
+    &__title {
+        margin-top: 26px;
+    }
+    &__subtitle {
+        margin-top: 9px;
+    }
+    &__divider {
+        position: relative;
+        margin: 0 auto;
+        margin-top: 40px;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: #fff;
+        &:before {
+            @include divider;
+            left: -401px;
+        }
+        &:after {
+            @include divider;
+            left: 23px;
+        }
+    }
+    &__wrapper {
+        margin-top: 27px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: minmax(140px, auto);
+        column-gap: 29px;
+    }
+    &__item {
+        display: grid;
+        grid-template-rows: minmax(63px, auto) 1fr;
+        row-gap: 16px;
+        place-items: center center;
+    }
+    &__icon {
+        display: block;
+        max-width: 67px;
+    }
+    &__about {
+        text-align: justify;
+        text-align-last: center;
+        place-self: start;
+    }
+    &__btn {
+        margin-top: 39px;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,15 @@
+.manager {
+    min-height: 342px;
+    padding: 58px 0 75px 0;
+    background: url(../../img/bg/manager.jpg) center center/cover no-repeat;
+    &__icon {
+        display: block;
+        margin: 0 auto;
+        height: 102px;
+    }
+    &__descr {
+        margin: 0 auto;
+        margin-top: 18px;
+        width: 926px;
+    }
+}

@@ -1,0 +1,21 @@
+.advantage {
+    min-height: 590px;
+    padding: 57px 0 51px 0;
+    background-color: $color-bg;
+    &__wrapper {
+        margin-top: 31px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(64px, auto);
+        column-gap: 93px;
+        row-gap: 36px;
+    }
+    &__item {
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        column-gap: 13px;
+    }
+    &__subheader {
+        font-weight: 700;
+    }
+}

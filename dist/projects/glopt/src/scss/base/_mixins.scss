@@ -1,0 +1,41 @@
+@mixin divider{ 
+	content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 388px;
+    height: 1px;
+    background-color: #fff;
+}
+@mixin bg_white {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: #fff;
+    height: 6px;
+    margin: 0 auto;
+}
+@mixin arrow {
+    width: 14px;
+    height: 46px;
+    position: absolute;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    top: 38px;
+}
+@mixin form {
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    grid-template-rows: 47px;
+    column-gap: 5px;
+    place-content: center;
+}
+@mixin input {
+    border-radius: 30px;
+    border: 1px solid #898989;
+    padding: 17px 30px;
+}

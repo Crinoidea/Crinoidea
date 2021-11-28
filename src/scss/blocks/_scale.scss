@@ -1,0 +1,38 @@
+.scale {
+    padding-top: 118px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, 58px);
+        grid-auto-rows: 58px;
+        row-gap: 37px;
+        column-gap: 40px;
+    }
+    &__item {
+        position: relative;
+        display: grid;
+        grid-template-rows: minmax(21px, auto) 14px;
+        grid-template-columns: 200px 35px;
+        justify-content: space-between;
+        align-content: space-between;
+        &-title {
+            padding-left: 15px;
+            @include before_circle;
+            &:before {
+                position: absolute;
+                top: -9px;
+            }
+        }
+        &-progress {
+            width: 350px;
+            height: 14px;
+            border-radius: 4px;
+            background-color: rgba(232, 228, 222, 1);
+            span {
+                display: block;
+                height: 100%;
+                background-color: $color-blue;
+            }
+        }
+    }
+}

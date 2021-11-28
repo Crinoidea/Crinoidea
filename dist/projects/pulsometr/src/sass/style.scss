@@ -1,0 +1,33 @@
+@import "libs/bootstrap-reboot.min";
+@import "libs/fonts";
+@import "libs/slick";
+@import "libs/tiny-slider";
+@import "libs/animate";
+
+@import "base/variables";
+@import "base/animations";
+
+* {
+	font-family: 'Museo Sans', sans-serif;
+}
+.container {
+	max-width: 950px; 
+	margin: 0 auto; /* выровнять по центру контейнер */
+	position: relative;
+}
+
+@import "blocks/promo";
+@import "blocks/header";
+@import "blocks/buttons";
+@import "blocks/advantages";
+@import "blocks/header_repeat";
+@import "blocks/consultation";
+@import "blocks/forms";
+@import "blocks/carousel";
+@import "blocks/catalog";
+@import "blocks/review";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/pageup";
+
+@import "blocks/media"

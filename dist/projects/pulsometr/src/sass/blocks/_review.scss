@@ -1,0 +1,39 @@
+.review {
+	padding-bottom: 71px;
+	&__wrapper {
+		display: flex;
+		justify-content: start;
+		align-items: flex-start;
+		margin-top: 102px;
+		&_mt70 { /* модификатор через _ */
+			margin-top: 70px;
+		}
+	}
+	&__photo {
+		width: 169px;
+		height: 169px;
+	}
+	&__items {
+		margin-left: 62px;
+		max-width: 652px;
+	}
+	&__header {
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 700;
+		color: #0d0d0d;
+	}
+	&__subheader {
+		font-size: 14px;
+		line-height: 14px;
+		font-weight: 300;
+		color: #646464;
+	}
+	&__descr {
+		margin-top: 19px;
+		font-size: 16px;
+		line-height: 1.2;
+		font-weight: 300;
+		color: #0d0d0d;
+	}
+}
