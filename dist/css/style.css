@@ -269,7 +269,7 @@ template {
 .promo {
   min-height: 100vh;
   position: relative;
-  background: url(../../img/bg_promo.jpg) center center/cover no-repeat;
+  background: url(../img/bg_promo.jpg) center center/cover no-repeat;
   padding-top: 206px; }
   .promo__subtitle {
     position: relative;
