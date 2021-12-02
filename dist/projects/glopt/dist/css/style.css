@@ -80,7 +80,7 @@
 .promo {
   padding: 23px 0 81px 0;
   min-height: 680px;
-  background: url(../../img/bg/header.jpg) center center/cover no-repeat; }
+  background: url(../img/bg/header.jpg) center center/cover no-repeat; }
   .promo__text {
     margin-top: 9px; }
   .promo__title {
@@ -292,7 +292,7 @@
 .agent {
   min-height: 342px;
   padding: 58px 0 75px 0;
-  background: url(../../img/bg/agent.jpg) center center/cover no-repeat; }
+  background: url(../img/bg/agent.jpg) center center/cover no-repeat; }
   .agent__icon {
     display: block;
     margin: 0 auto;
@@ -305,7 +305,7 @@
 .manager {
   min-height: 342px;
   padding: 58px 0 75px 0;
-  background: url(../../img/bg/manager.jpg) center center/cover no-repeat; }
+  background: url(../img/bg/manager.jpg) center center/cover no-repeat; }
   .manager__icon {
     display: block;
     margin: 0 auto;
