@@ -236,9 +236,6 @@
             line-height: 36px;
         }
     }
-    .divider {
-        margin-top: 15px;
-    }
     .promo {
         background: url('../img/bg_promo.jpg') no-repeat 40%/cover;
         &__title {
@@ -264,6 +261,11 @@
         }
         &__experience {
             grid-template-columns: 1fr;
+        }
+        &__name {
+            .divider {
+                margin-top: 15px;
+            }
         }
     }
     .skills {

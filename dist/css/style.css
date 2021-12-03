@@ -981,8 +981,6 @@ template {
     margin-top: 26px;
     font-size: 24px;
     line-height: 36px; }
-  .divider {
-    margin-top: 15px; }
   .promo {
     background: url("../img/bg_promo.jpg") no-repeat 40%/cover; }
     .promo__title {
@@ -999,6 +997,8 @@ template {
     grid-template-rows: 340px auto auto; }
   .about__experience {
     grid-template-columns: 1fr; }
+  .about__name .divider {
+    margin-top: 15px; }
   .skills__wrapper {
     grid-template-columns: repeat(1, 290px);
     grid-template-rows: repeat(6, 1fr);
