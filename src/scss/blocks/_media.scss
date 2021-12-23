@@ -3,6 +3,7 @@
         display: none;
     }
 }
+
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
@@ -247,8 +248,11 @@
     }
     .menu {
         &__block {
-            padding-left: 20px;
+            padding: 140px 0 30px 20px;
             width: 250px;
+        }
+        &__link {
+            font-size: 22px;
         }
     }
     .about {
