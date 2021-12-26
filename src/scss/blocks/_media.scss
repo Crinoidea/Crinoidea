@@ -22,12 +22,6 @@
             }
         }
     }
-    .skills {
-        &__wrapper {
-            grid-template-columns: repeat(auto-fit, 370px);
-            justify-content: space-around;
-        }
-    }
     .scale {
         &__wrapper {
             grid-template-columns: repeat(auto-fit, 350px);
@@ -276,12 +270,8 @@
         }
     }
     .skills {
-        &__wrapper {
-            grid-template-columns: repeat(1, 290px);
-            grid-template-rows: repeat(6, 1fr);
-            grid-auto-rows: 1fr;
-        }
         &__item {
+            width: 290px;
             &-descr {
                 margin-top: 16px;
                 min-width: auto;

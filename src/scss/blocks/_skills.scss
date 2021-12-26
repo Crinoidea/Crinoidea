@@ -1,16 +1,16 @@
 .skills {
     padding-top: 45px;
     &__wrapper {
-        padding-top: 60px;
+        padding-top: 36px;
         min-height: 372px;
-        display: grid;
-        grid-template-columns: repeat(3, 370px);
-        grid-template-rows: repeat(2, 170px);
-        grid-auto-rows: 170px;
-        justify-content: space-between;
-        row-gap: 24px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
     }
     &__item {
+        margin-top: 24px;
+        width: 370px;
+        min-height: 170px;
         padding: 28px 20px 0 103px;
         border: 1px solid $color-black;
         border-radius: 10px;
