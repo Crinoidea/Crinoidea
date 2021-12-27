@@ -49,6 +49,32 @@
             height: 768px;
         }
     }
+    .offer {
+        .bgc_y {
+            width: 100%;
+        }
+        .container {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        &__advantages {
+            width: auto;
+            display: flex;
+            margin-top: 50px;
+            text-align: justify;
+            h2 {
+                &:first-child {
+                    margin-top: 20px;
+                }
+            }
+            div {
+                width: 90%;
+            }
+        }
+        &:last-child {
+            justify-content: center;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -97,6 +123,24 @@
                 left: 0;
                 width: 680px;
             }
+        }
+    }
+    .offer {
+        padding: 50px 0 70px;
+        &__descr {
+            text-align: center;
+        }
+        &__action {
+            margin-top: 40px;
+        }
+        &__advantages {
+            margin-top: 68px;
+            &-text {
+                font-size: 15px;
+            }
+        }
+        &__slider {
+            margin-top: 15px;
         }
     }
 }
@@ -178,6 +222,20 @@
     .preview {
         .bgc_blue {
             height: 885px;
+        }
+    }
+    .offer {
+        &__descr {
+            font-size: 17px;
+        }
+        &__advantages {
+            flex-wrap: wrap;
+            div {
+                width: 100%;
+                h2 {
+                    text-align: center;
+                }
+            }
         }
     }
 }
