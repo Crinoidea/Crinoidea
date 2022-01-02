@@ -47,4 +47,37 @@ smoothScroll(menuLinks, contact, 4);
 smoothScroll(promoLinks, portfolio, 0);
 smoothScroll(promoLinks, about, 1);
 
+//scroll to top
+/**
+			$(window).scroll(function () {
+		if ($(this).scrollTop() > 1600) {
+			$('.pageup').fadeIn();
+		} else {
+			$('.pageup').fadeOut();
+		}
+	});
+
+	$("a[href='#up']").click(function(){
+		const _href = $(this).attr("href");
+		$("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+		return false;
+	});
+ */
+const pageUp = document.querySelector('[href="#up"]');
+
+window.addEventListener('scroll', (event) => {
+    if (document.documentElement.scrollTop > 600) {
+        pageUp.classList.add('show');
+        pageUp.classList.remove('hide');
+    } 
+    if (document.documentElement.scrollTop < 600) {
+        pageUp.classList.add('hide');
+        pageUp.classList.remove('show');
+    }
+});
+
+pageUp.addEventListener('click', (event) => {
+    document.documentElement.scrollTop = 0;
+});
+console.log(document.documentElement.scrollHeight);
 
