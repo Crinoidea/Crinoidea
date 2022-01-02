@@ -47,25 +47,11 @@ smoothScroll(menuLinks, contact, 4);
 smoothScroll(promoLinks, portfolio, 0);
 smoothScroll(promoLinks, about, 1);
 
-//scroll to top
-/**
-			$(window).scroll(function () {
-		if ($(this).scrollTop() > 1600) {
-			$('.pageup').fadeIn();
-		} else {
-			$('.pageup').fadeOut();
-		}
-	});
 
-	$("a[href='#up']").click(function(){
-		const _href = $(this).attr("href");
-		$("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-		return false;
-	});
- */
+//scroll to top
 const pageUp = document.querySelector('[href="#up"]');
 
-window.addEventListener('scroll', (event) => {
+window.addEventListener('scroll', () => {
     if (document.documentElement.scrollTop > 600) {
         pageUp.classList.add('show');
         pageUp.classList.remove('hide');
@@ -76,8 +62,7 @@ window.addEventListener('scroll', (event) => {
     }
 });
 
-pageUp.addEventListener('click', (event) => {
+pageUp.addEventListener('click', () => {
     document.documentElement.scrollTop = 0;
 });
-console.log(document.documentElement.scrollHeight);
 
