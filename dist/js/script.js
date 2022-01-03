@@ -63,6 +63,11 @@ window.addEventListener('scroll', () => {
 });
 
 pageUp.addEventListener('click', () => {
-    document.documentElement.scrollTop = 0;
+    let a = setInterval(() => {
+        document.documentElement.scrollTop -= 40;
+        if (document.documentElement.scrollTop == 0) {
+            clearInterval(a);
+        }
+    }, 4);
 });
 
