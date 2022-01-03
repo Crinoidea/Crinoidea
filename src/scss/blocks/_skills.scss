@@ -1,10 +1,10 @@
 .skills {
-    padding-top: 45px;
+    padding-top: 100px;
     &__wrapper {
         padding-top: 36px;
         min-height: 372px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         flex-wrap: wrap;
     }
     &__item {
