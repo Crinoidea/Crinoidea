@@ -2,6 +2,7 @@
 
 const hamburger = document.querySelector('.hamburger'), 
       menu = document.querySelector('.menu'),
+      menuOverlay = document.querySelector('.menu__overlay'),
       closeElem = document.querySelector('.menu__close');
     
 hamburger.addEventListener('click', () => {
@@ -10,6 +11,12 @@ hamburger.addEventListener('click', () => {
 
 closeElem.addEventListener('click', () => {
     menu.classList.remove('active');
+});
+
+menu.addEventListener('click', (event) => {
+    if (event.target == menuOverlay) {
+        menu.classList.remove('active');
+    }
 });
 
 /* percents */
