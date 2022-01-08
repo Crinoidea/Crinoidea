@@ -1,0 +1,33 @@
+.feature {
+    min-height: 675px;
+    padding: 138px 0 184px;
+    background: url(../img/bg_feature.jpg) center center/contain no-repeat #f6f5f3;
+    &__subheader {
+        text-align: center;
+    }
+    &__header {
+        text-align: center;
+    }
+    &__wrapper {
+        margin-top: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    &__item {
+        width: 340px;
+    }
+    &__img {
+        display: block;
+        margin: 0 auto;
+    }
+    &__title {
+        margin-top: 29px;
+        text-align: center;
+    }
+    &__descr {
+        margin-top: 19px;
+        text-align: justify;
+        text-align-last: center;
+    }
+}

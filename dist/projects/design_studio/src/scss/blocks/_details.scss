@@ -1,0 +1,39 @@
+.details {
+    padding-top: 108px;
+    min-height: 754px;
+    background-color: #f6f5f3;
+    &__subheader {
+        text-align: center;
+    }
+    &__header {
+        text-align: center;
+    }
+    &__descr {
+        margin: 0 auto;
+        margin-top: 35px;
+        text-align: center;
+        width: 650px;
+    }
+    &__wrapper {
+        position: relative;
+        margin: 0 auto;
+        margin-top: 93px;
+        width: 820px;
+        height: 375px;
+        &-bg {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &-img {
+            padding: 0 26px;
+            width: inherit;
+            height: 322px;
+            position: absolute;
+            top: 53px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

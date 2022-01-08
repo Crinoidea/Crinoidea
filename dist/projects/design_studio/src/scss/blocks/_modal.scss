@@ -1,0 +1,76 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.5);
+    &__wrapper {
+        max-width: 500px;
+        margin: 40px auto;
+        position: relative;
+        width: 100%;
+        padding: 60px 40px 50px;
+        background-color: #323969;
+        border: 1px solid rgba(0,0,0,.2);
+        border-radius: 4px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    &__form {
+        margin-top: 50px;
+        input {
+            display: block;
+            margin: 20px auto;
+            width: 280px;
+            height: 50px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid #fff;
+            border-radius: 3px;
+            text-align: center;
+            padding: 0 20px;
+            background-color: #323969;
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        width: 280px;
+        border: 1px solid $color-pink;
+        box-shadow: 0px 3px 3px 0px rgba(14,15,15,0.25);
+        letter-spacing: 0.04em;
+    }
+    &__trial {
+        margin-top: 30px;
+        font-weight: 400;
+        opacity: 0.5;
+        text-align: center;
+    }
+    &__policy {
+        margin: 0 auto; 
+        margin-top: 40px;
+        text-align: center;
+        font-weight: 400;
+        line-height: 25px;
+        opacity: 0.5;
+        width: 280px;
+        &-link {
+            text-decoration: underline;
+            color: inherit;
+            &:hover {
+                color: $color-pink;
+                transition: 0.3s;
+            }
+        }
+    }
+    &__header {
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
