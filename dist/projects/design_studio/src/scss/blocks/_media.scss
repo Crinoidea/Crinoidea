@@ -258,4 +258,15 @@
     .footer {
         background: url(../img/bg_footer.png) center 150%/auto no-repeat;
     }
+    .modal {
+        &__wrapper {
+            padding: 60px 15px 50px;
+        }
+        input {
+            width: 263px;
+        }
+        &__btn {
+            width: 263px;
+        }
+    }
 }
