@@ -48,7 +48,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const day23 = 23.45 * 24 * 1000 * 60 * 60,
     deadline = Date.parse(new Date()) + day23;
 
-    console.log(deadline);
     function getDifferenceInTime (endTime) {
         const t = endTime - Date.parse(new Date()),
               days = Math.floor(t / (1000 * 60 * 60 * 24)),
@@ -104,6 +103,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //Modal  
 
+    console.log(document.documentElement.clientWidth);
+
     const modalTrigger = document.querySelectorAll('[data-modal]'),
           modal = document.querySelector('.modal'),
           modalClose = document.querySelector('[data-close]');
@@ -116,10 +117,11 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
 
         sections.forEach(item => {
-            if (item.classList.contains('sidepanel')) {
-                    
-            } else {
+            if (!item.classList.contains('sidepanel')) {
                 item.style.paddingRight = '17px';
+            }
+            if (document.documentElement.clientWidth <= 576) {
+                item.style.paddingRight = '0px';
             }
         });
 
@@ -136,9 +138,7 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
 
         sections.forEach(item => {
-            if (item.classList.contains('sidepanel')) {
-                    
-            } else {
+            if (!item.classList.contains('sidepanel')) {
                 item.style.paddingRight = '0px';
             }
         });
