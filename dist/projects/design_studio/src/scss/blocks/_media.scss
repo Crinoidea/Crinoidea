@@ -260,13 +260,19 @@
     }
     .modal {
         &__wrapper {
-            padding: 60px 15px 50px;
+            padding: 60px 15px 40px;
         }
         input {
             width: 263px;
         }
         &__btn {
             width: 263px;
+        }
+        &__policy {
+            margin-top: 20px;
+        }
+        &__form {
+            margin-top: 40px;
         }
     }
 }
