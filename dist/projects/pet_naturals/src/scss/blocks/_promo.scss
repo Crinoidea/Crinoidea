@@ -1,0 +1,178 @@
+.promo {
+    min-height: 844px;
+    background: url(../images/promo/bg_promo.webp) center center/cover no-repeat;
+    padding: 23px 0 100px;
+    z-index: -2;
+    &__title {
+        color: #F9E994;
+        max-width: 578px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    &__wrapper {
+        margin-top: 5px;
+        display: grid;
+        grid-template-rows: minmax(428px, auto) 417px 462px;
+        grid-template-columns: auto;
+    }
+    &__item {
+        margin: 0 auto;
+        &:nth-child(2) {
+            position: relative;
+            &:before {
+                @include cat;
+            }
+            &:after {
+                @include cat;
+                top: -120px;
+                left: -22px;
+                transform: rotateZ(242deg) scale(-1, 1);
+            }
+        }
+        &:nth-child(3) {
+            width: 270px;
+            background-color: #FDFCFC;
+            border-radius: 20px 20px 10px 10px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+    &__descr {
+        padding: 0 10px;
+        margin-top: 33px;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 30px;
+        color: #F6F7E4;
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    }
+    &__menu {
+        margin: 0 auto;
+        margin-top: 61px;
+        padding: 15px 26px 0px 70px;
+        max-width: 323px;
+        height: 266px;
+        background: #7FB3E1;
+        border-radius: 20px;
+        list-style: none;
+    }
+    &__text {
+        position: relative;
+        margin-top: 19.5px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+        color: #DFE4DE;
+        &:before {
+            @include paw;
+        }
+    }
+    &__feed {
+        padding-top: 52px;
+        display: block;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        z-index: 2;
+        width: 300px;
+    }
+    &__timer {
+        width: 270px;
+        height: 196px;
+        background: url(../images/promo/form.webp) top center/103% 100% no-repeat;
+        border-radius: 7px 7px 0px;
+        text-align: center;
+        padding-top: 23px;
+        .descr {
+            font-weight: 700;
+            font-size: 33px;
+            line-height: 39px;
+            color: #483C08;
+        }
+        .timer {
+            margin-top: 8px;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 42px;
+            color: #F6E791;
+        }
+        .price {
+            margin-top: 3px;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            &_old {
+                position: relative;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 43px;
+                color: #6B6B6B;
+                &:before {
+                    position: absolute;
+                    content: '';
+                    border-bottom: 2px solid #F6BE91;
+                    transform: rotate(162.55deg);
+                    width: 100%;
+                    height: 50%;
+                    top: 21px;
+                }
+            }
+            &_new {
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 42px;
+                color: #483C08;
+            }
+        }
+    }
+    &__form {
+        margin-top: 15px;
+        position: relative;
+        padding: 0 24px;
+        display: grid;
+        grid-template-columns: 222px;
+        grid-template-rows: repeat(3, 50px);
+        row-gap: 15px;
+        input {
+            padding-left: 55px;
+            background: #F3EFEF;
+            border-radius: 30px;
+            border: none;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            color: #777777;
+        }
+        &:before {
+            @include paw;
+            opacity: .3;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1.25));
+            left: 46px;
+        }
+        &:after {
+            @include paw;
+            opacity: .3;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1.25));
+            left: 46px;
+            top: 78px;
+        }
+    }
+    &__btn {
+        background: #A1D337;
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 35px;
+        color: #FFFFFF;
+        border: none;
+    }
+    &__date {
+        margin-top: 30px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        color: #444444;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+}

@@ -1,0 +1,21 @@
+@mixin cat { 
+    position: absolute;
+    content: '';
+    display: block;
+    background: url(../images/promo/hungry_cat.webp) center center/cover no-repeat;
+    z-index: 10;
+    top: 200px;
+    left: -210px;
+    width: 180px;
+    height: 250px;
+}
+@mixin paw {
+    position: absolute;
+    content: '';
+    display: block;
+    background: url(../images/icons/paw.webp) center center/cover no-repeat;
+    width: 18px;
+    height: 24px;
+    top: 12px;
+    left: -35px;
+}
