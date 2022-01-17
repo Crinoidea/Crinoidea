@@ -37,22 +37,46 @@
         &__title {
             margin-top: 50px;
         }
+        &__wrapper {
+            row-gap: unset;
+        }
         &__descr {
            font-weight: 700;
         }
         &__item {
             &:nth-child(2) {
                 &:before {
-                    left: -230px;
+                    left: -220px;
+                    top: 212px;
                 }
                 &:after {
-                    left: 55px;
+                    left: 44px;
+                    top: -108px;
                 }
             }
+        }
+        &__feed {
+            bottom: unset;
         }
     }
     .about {
         background: url(../images/about/bg_about.webp) 100% 2%/200% 28% repeat-y;
+        &__item {
+            width: 305px;
+        }
+        &__subtitle {
+            font-size: 22px;
+        }
+        &__descr {
+            font-size: 18px;
+        }
+    }
+    .results {
+        &__img {
+            img {
+                width: 300px;
+            }
+        }
     }
 }
 

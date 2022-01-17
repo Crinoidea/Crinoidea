@@ -14,6 +14,7 @@
         display: grid;
         grid-template-rows: minmax(428px, auto) 417px 462px;
         grid-template-columns: auto;
+        row-gap: 50px;
     }
     &__item {
         margin: 0 auto;
@@ -24,8 +25,8 @@
             }
             &:after {
                 @include cat;
-                top: -120px;
-                left: -22px;
+                top: -71px;
+                left: -84px;
                 transform: rotateZ(242deg) scale(-1, 1);
             }
         }
@@ -71,6 +72,7 @@
         display: block;
         position: absolute;
         right: 50%;
+        bottom: 20px;
         transform: translateX(50%);
         z-index: 2;
         width: 300px;
