@@ -278,7 +278,7 @@ window.addEventListener('DOMContentLoaded', () => {
     } */
 
     // JSON
-    function postData(form) {
+/*     function postData(form) {
         form.addEventListener('submit', (event) => {
             event.preventDefault();
 
@@ -314,6 +314,47 @@ window.addEventListener('DOMContentLoaded', () => {
                 } else {
                     showThanksModal(message.failure);
                 }
+            });
+        });
+    } */
+    // post data by fetch
+    function postData(form) {
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const statusMessage = document.createElement('img');
+            statusMessage.src = message.loading;
+            statusMessage.style.cssText = `
+                display: block;
+                margin: 0 auto;
+            `;
+            form.insertAdjacentElement('afterend', statusMessage); // спиннер вне формы
+
+            const formData = new FormData(form);
+
+            const object = {};
+            formData.forEach(function(value, key) {
+                object[key] = value;
+            });
+
+            const json = JSON.stringify(object);
+
+            fetch('server.php', {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: json
+            })
+            .then(data => data.text())
+            .then(data => {
+                console.log(data);
+                showThanksModal(message.success);
+                statusMessage.remove();
+            }).catch(() => {
+                showThanksModal(message.failure);
+            }).finally(() => {
+                form.reset();
             });
         });
     }
