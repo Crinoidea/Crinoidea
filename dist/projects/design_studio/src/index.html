@@ -167,7 +167,7 @@
             <form action="#" class="start__form">
                 <input type="name" required name="name" placeholder="FULL NAME">
                 <input type="email" required name="email" placeholder="YOUR EMAIL">
-                <input type="password" required name="password" placeholder="PASSWORD">
+                <input type="password" required name="password" placeholder="PASSWORD" autocomplete="off">
                 <button class="start__btn btn" type="submit" data-submit>TRY NOW</button>
                 <img src="icons/arrow.png" alt="arrow" class="start__img">
                 <span class="start__trial title title_white title_fs16">30 days free trial for all</span>
@@ -257,7 +257,7 @@
 
     <div class="modal hide">
         <div class="modal__wrapper">
-            <img class="close"src="icons/close.svg" alt="close">
+            <img class="close" data-close src="icons/close.svg" alt="close">
             <div class="modal__header title title_white title_fs22">
                 Sign up now!
             </div>
@@ -276,11 +276,11 @@
 
     <div class="registration hide">
         <div class="registration__wrapper">
-            <img class="close"src="icons/close.svg" alt="close">
-            <img class="registration__check"src="icons/checkmark.svg" alt="check">
+            <img class="close" data-close src="icons/close.svg" alt="close">
+            <img class="registration__check"src="icons/spinner.svg" alt="check">
 
             <div class="registration__header title title_white title_fs22">
-                subscription successful!
+                Loading...
             </div>
         </div>
     </div>

@@ -6,8 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //Modal
     const modalBtn = document.querySelector('[data-modal]'),
-          modalBlock = document.querySelector('.modal'),
-          closeBtn = document.querySelector('.close');
+          modalBlock = document.querySelector('.modal');
 
     const sections = document.querySelectorAll('body > *');
 
@@ -24,6 +23,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 item.style.paddingRight = '0px';
             }
         });
+
+        closeModalAside(block);
     }
 
     function closeModal(block) {
@@ -42,24 +43,22 @@ window.addEventListener('DOMContentLoaded', () => {
         openModal(modalBlock);
     });
 
-    closeBtn.addEventListener('click', () => {
-        closeModal(modalBlock);
-    }); 
-
     function closeModalAside(block) {
         block.addEventListener('click', (event) => {
-            if (event.target == block) {
+            if (event.target == block || event.target.getAttribute('data-close') == '') {
                 closeModal(block);
             }
         });
     }
-    closeModalAside(modalBlock);
 
     //Send data
-    const forms = document.querySelectorAll('form');
+    const forms = document.querySelectorAll('form'),
+          statusModal = document.querySelector('.registration'),
+          statusHeader = document.querySelector('.registration__header'),
+          statusImg = document.querySelector('.registration__check');
 
     const message = {
-        loading: 'Loading...',
+        success: 'subscription successful!',
         failure: 'Oops, error ;('
     };
 
@@ -71,9 +70,6 @@ window.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', (event) => {
             event.preventDefault();
 
-            const statusMessage = message.loading;
-
-            
             const request = new XMLHttpRequest();
             request.open('POST', 'server.php');
 
@@ -82,15 +78,30 @@ window.addEventListener('DOMContentLoaded', () => {
             request.send(formData);
 
             request.addEventListener('load', () => {
+                showThanksModal(statusModal);
                 if (request.status === 200) {
-                    console.log(request.response);
-                }
-                else {
-                    console.log(message.failure);
+                    showThanksModal(statusModal);
+                    statusHeader.textContent = message.success;
+                    statusImg.src = 'icons/checkmark.svg';
+                } else {
+                    showThanksModal(statusModal);
+                    statusHeader.textContent = message.failure;
+                    statusImg.src = 'icons/close.svg';
                 }
             });
         });
     }
 
+    function showThanksModal(modal) {
 
+        openModal(modal);
+        closeModalAside(modal);
+        if (modalBlock.classList.contains('show')) {
+            closeModal(modalBlock);
+        }
+
+        setTimeout(() => {
+            closeModal(modal);
+        }, 4000);
+    }
 });
