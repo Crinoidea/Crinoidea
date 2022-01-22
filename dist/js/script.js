@@ -56,7 +56,7 @@ smoothScroll(promoLinks, about, 1);
 
 
 //scroll to top
-const pageUp = document.querySelector('[href="#up"]');
+const pageUp = document.querySelector('[href="#promo"]');
 
 window.addEventListener('scroll', () => {
     if (document.documentElement.scrollTop > 600) {
