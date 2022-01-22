@@ -55,4 +55,42 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     closeModalAside(modalBlock);
 
+    //Send data
+    const forms = document.querySelectorAll('form');
+
+    const message = {
+        loading: 'Loading...',
+        failure: 'Oops, error ;('
+    };
+
+    forms.forEach(item => {
+        postData(item);
+    });
+
+    function postData(form) {
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const statusMessage = message.loading;
+
+            
+            const request = new XMLHttpRequest();
+            request.open('POST', 'server.php');
+
+            const formData = new FormData(form);
+
+            request.send(formData);
+
+            request.addEventListener('load', () => {
+                if (request.status === 200) {
+                    console.log(request.response);
+                }
+                else {
+                    console.log(message.failure);
+                }
+            });
+        });
+    }
+
+
 });
