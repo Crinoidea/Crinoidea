@@ -310,6 +310,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Slider
     const slides = document.querySelectorAll('.offer__slide'),
+          slider = document.querySelector('.offer__slider'),
           prev = document.querySelector('.offer__slider-prev'),
           next = document.querySelector('.offer__slider-next'),
           total = document.querySelector('#total'),
@@ -346,6 +347,30 @@ window.addEventListener('DOMContentLoaded', () => {
         slide.style.width = widthWrapper;
     });
 
+    slider.style.position = 'relative';
+
+    const dots = document.createElement('ol'),
+          dotsArray = [];
+
+    dots.classList.add('carousel-dots');
+    slider.append(dots);
+
+    for (let i = 0; i < slides.length; i++) {
+        const dot = document.createElement('li');
+        dot.setAttribute('data-slide-to', i + 1);
+        dot.classList.add('dot');
+        if (i == 0) {
+            dot.style.opacity = 1;
+        }
+        dots.append(dot);
+        dotsArray.push(dot);
+    }
+
+    function setOpasityDots() {
+        dotsArray.forEach(dot => dot.style.opacity = '.5');
+        dotsArray[slideIndex - 1].style.opacity = 1;
+    }
+
     next.addEventListener('click', () => {
         if (offset == +widthWrapper.slice(0, widthWrapper.length - 2) * (slides.length - 1)) {
             offset = 0;
@@ -362,6 +387,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         
         addZeroToIndex();
+        setOpasityDots();
     });
 
     prev.addEventListener('click', () => {
@@ -380,5 +406,20 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         addZeroToIndex();
+        setOpasityDots();
+    });
+
+    dotsArray.forEach(item => {
+        item.addEventListener('click', (event) => {
+            const slideTo = event.target.getAttribute('data-slide-to');
+
+            slideIndex = slideTo;
+            offset = +widthWrapper.slice(0, widthWrapper.length - 2) * (slideTo - 1);
+
+            slidesField.style.transform = `translateX(-${offset}px)`;
+
+            addZeroToIndex();
+            setOpasityDots();
+        });
     });
 });
