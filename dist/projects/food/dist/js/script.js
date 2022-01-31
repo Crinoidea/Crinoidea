@@ -226,8 +226,6 @@ window.addEventListener('DOMContentLoaded', () => {
         'menu__item'
     ).render();
 
-
-
     
     //Forms
 
@@ -243,80 +241,6 @@ window.addEventListener('DOMContentLoaded', () => {
         postData(item);
     });
 
-    /* FormData
-
-    function postData(form) {
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
-
-            const statusMessage = document.createElement('div');
-            statusMessage.classList.add('status');
-            statusMessage.textContent = message.loading;
-            form.append(statusMessage);
-
-            const request = new XMLHttpRequest();
-            request.open('POST', 'server.php'); */
-            
-            /* request.setRequestHeader('Content-type', 'multipart/form-data');  - не нужно указывать у FormData*/
-            /* const formData = new FormData(form);
-
-            request.send(formData);
-
-            request.addEventListener('load', () => {
-                if (request.status === 200) {
-                    console.log(request.response);
-                    statusMessage.textContent = message.success;
-                    form.reset();
-                    setTimeout(() => {
-                        statusMessage.remove();
-                    }, 2000);
-                } else {
-                    statusMessage.textContent = message.failure;
-                }
-            });
-        });
-    } */
-
-    // JSON
-/*     function postData(form) {
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
-
-            const statusMessage = document.createElement('img');
-            statusMessage.src = message.loading;
-            statusMessage.style.cssText = `
-                display: block;
-                margin: 0 auto;
-            `;
-            form.insertAdjacentElement('afterend', statusMessage); // спиннер вне формы
-
-            const request = new XMLHttpRequest();
-            request.open('POST', 'server.php'); 
-            
-            request.setRequestHeader('Content-type', 'application/json');
-            const formData = new FormData(form);
-
-            const object = {};
-            formData.forEach(function(value, key) {
-                object[key] = value;
-            });
-
-            const json = JSON.stringify(object);
-
-            request.send(json);
-
-            request.addEventListener('load', () => {
-                if (request.status === 200) {
-                    console.log(request.response);
-                    showThanksModal(message.success);
-                    form.reset();
-                    statusMessage.remove();
-                } else {
-                    showThanksModal(message.failure);
-                }
-            });
-        });
-    } */
     // post data by fetch
     function postData(form) {
         form.addEventListener('submit', (event) => {
@@ -383,4 +307,78 @@ window.addEventListener('DOMContentLoaded', () => {
             closeModal();
         }, 4000);
     }
+
+    // Slider
+    const slides = document.querySelectorAll('.offer__slide'),
+          prev = document.querySelector('.offer__slider-prev'),
+          next = document.querySelector('.offer__slider-next'),
+          total = document.querySelector('#total'),
+          current = document.querySelector('#current'),
+          slidesWrapper = document.querySelector('.offer__slider-wrapper'),
+          slidesField = document.querySelector('.offer__slider-inner'),
+          widthWrapper = window.getComputedStyle(slidesWrapper).width;
+
+    let slideIndex = 1;
+    let offset = 0; 
+
+    if (slides.length < 10) {
+        total.textContent = `0${slides.length}`;
+    } else {
+        total.textContent = slides.length;
+    }
+
+    function addZeroToIndex() {
+        if (slideIndex < 10) {
+            current.textContent = `0${slideIndex}`;
+        } else {
+            current.textContent = slideIndex;
+        }
+    }
+    addZeroToIndex();
+
+    slidesField.style.width = 100 * slides.length + '%';
+    slidesField.style.display = 'flex';
+    slidesField.style.transition = '0.5s all';
+
+    slidesWrapper.style.overflow = 'hidden'; 
+
+    slides.forEach(slide => {
+        slide.style.width = widthWrapper;
+    });
+
+    next.addEventListener('click', () => {
+        if (offset == +widthWrapper.slice(0, widthWrapper.length - 2) * (slides.length - 1)) {
+            offset = 0;
+        } else {
+            offset += +widthWrapper.slice(0, widthWrapper.length - 2);
+        }
+
+        slidesField.style.transform = `translateX(-${offset}px)`;
+
+        if (slideIndex == slides.length) {
+            slideIndex = 1;
+        } else {
+            slideIndex++;
+        }
+        
+        addZeroToIndex();
+    });
+
+    prev.addEventListener('click', () => {
+        if (offset == 0) {
+            offset = +widthWrapper.slice(0, widthWrapper.length - 2) * (slides.length - 1);
+        } else {
+            offset -= +widthWrapper.slice(0, widthWrapper.length - 2);
+        }
+
+        slidesField.style.transform = `translateX(-${offset}px)`;
+
+        if (slideIndex == 1) {
+            slideIndex = slides.length;
+        } else {
+            slideIndex--;
+        }
+
+        addZeroToIndex();
+    });
 });
