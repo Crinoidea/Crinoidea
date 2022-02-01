@@ -290,6 +290,10 @@
         .bgc_y {
             height: 630px;
         }
+        &__slider {
+            width: 500px;
+            margin-top: 40px;
+        }
     }
     .order {
         &__form {
@@ -397,6 +401,9 @@
         }
         .bgc_y {
             height: 700px;
+        }
+        &__slider {
+            width: 300px;
         }
     }
     .calculating {
