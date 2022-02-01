@@ -479,6 +479,15 @@ window.addEventListener('DOMContentLoaded', () => {
         const input = document.querySelector(selectorInput);
 
         input.addEventListener('input', () => {
+
+            if (input.value.match(/\D/g)) {
+                input.style.border = '1px solid red';
+                input.style.backgroundColor = 'rgba(231, 99, 99, 0.671)';
+            } else {
+                input.style.border = 'none';
+                input.style.backgroundColor = '#fff';
+            }
+
             switch(input.getAttribute('id')) {
                 case 'height': 
                     height = +input.value;
