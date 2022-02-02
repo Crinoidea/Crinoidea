@@ -435,16 +435,26 @@ function modal(triggerSelector, modalSelector, modalTimerId) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-function slider() {
+function slider(_ref) {
+  let {
+    container,
+    slide,
+    nextArrow,
+    prevArrow,
+    totalCounter,
+    currentCounter,
+    wrapper,
+    field
+  } = _ref;
   // Slider
-  const slides = document.querySelectorAll('.offer__slide'),
-        slider = document.querySelector('.offer__slider'),
-        prev = document.querySelector('.offer__slider-prev'),
-        next = document.querySelector('.offer__slider-next'),
-        total = document.querySelector('#total'),
-        current = document.querySelector('#current'),
-        slidesWrapper = document.querySelector('.offer__slider-wrapper'),
-        slidesField = document.querySelector('.offer__slider-inner'),
+  const slides = document.querySelectorAll(slide),
+        slider = document.querySelector(container),
+        prev = document.querySelector(prevArrow),
+        next = document.querySelector(nextArrow),
+        total = document.querySelector(totalCounter),
+        current = document.querySelector(currentCounter),
+        slidesWrapper = document.querySelector(wrapper),
+        slidesField = document.querySelector(field),
         widthWrapper = window.getComputedStyle(slidesWrapper).width;
   let slideIndex = 1;
   let offset = 0;
@@ -708,7 +718,16 @@ window.addEventListener('DOMContentLoaded', () => {
   Object(_modules_cards__WEBPACK_IMPORTED_MODULE_3__["default"])();
   Object(_modules_calculator__WEBPACK_IMPORTED_MODULE_4__["default"])();
   Object(_modules_form__WEBPACK_IMPORTED_MODULE_5__["default"])('form', modalTimerId);
-  Object(_modules_slider__WEBPACK_IMPORTED_MODULE_6__["default"])();
+  Object(_modules_slider__WEBPACK_IMPORTED_MODULE_6__["default"])({
+    container: '.offer__slider',
+    slide: '.offer__slide',
+    nextArrow: '.offer__slider-next',
+    prevArrow: '.offer__slider-prev',
+    totalCounter: '#total',
+    currentCounter: '#current',
+    wrapper: '.offer__slider-wrapper',
+    field: '.offer__slider-inner'
+  });
 });
 
 /***/ })
