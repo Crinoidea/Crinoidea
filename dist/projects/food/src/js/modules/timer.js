@@ -1,8 +1,8 @@
-function timer() {
+function timer(id) {
     // Timer 23 days
 
     const day23 = 23.45 * 24 * 1000 * 60 * 60,
-    deadline = Date.parse(new Date()) + day23;
+          deadline = Date.parse(new Date()) + day23;
 
     function getDifferenceInTime (endTime) {
         const t = endTime - Date.parse(new Date()),
@@ -27,7 +27,7 @@ function timer() {
     }
 
     function setTimer(endTime) {
-        const timer = document.querySelector('.timer'),
+        const timer = document.querySelector(id),
                 days = timer.querySelector('#days'),
                 hours = timer.querySelector('#hours'),
                 minutes = timer.querySelector('#minutes'),
