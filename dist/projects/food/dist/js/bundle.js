@@ -289,9 +289,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modal */ "./src/js/modules/modal.js");
 
 
-function form(modalTimerId) {
+function form(formSelector, modalTimerId) {
   //Forms
-  const forms = document.querySelectorAll('form');
+  const forms = document.querySelectorAll(formSelector);
   const message = {
     loading: 'img/form/spinner.svg',
     success: 'Спасибо! Скоро мы с вами свяжемся',
@@ -707,7 +707,7 @@ window.addEventListener('DOMContentLoaded', () => {
   Object(_modules_timer__WEBPACK_IMPORTED_MODULE_2__["default"])();
   Object(_modules_cards__WEBPACK_IMPORTED_MODULE_3__["default"])();
   Object(_modules_calculator__WEBPACK_IMPORTED_MODULE_4__["default"])();
-  Object(_modules_form__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  Object(_modules_form__WEBPACK_IMPORTED_MODULE_5__["default"])('form', modalTimerId);
   Object(_modules_slider__WEBPACK_IMPORTED_MODULE_6__["default"])();
 });
 
