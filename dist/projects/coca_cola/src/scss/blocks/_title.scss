@@ -1,0 +1,20 @@
+.title {
+    color: white;
+    font-weight: 400;
+    &_risque {
+        font-family: 'Risque', cursive;
+    }    
+    &_fs16 {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &_fs38 {
+        font-size: 38px;
+        line-height: 44px; 
+        margin-bottom: 0;
+    }
+    &_fs56 {
+        font-size: 56px;
+        line-height: 65px;
+    }
+}

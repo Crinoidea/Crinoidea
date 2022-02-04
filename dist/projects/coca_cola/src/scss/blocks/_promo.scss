@@ -1,0 +1,88 @@
+.promo {
+    position: relative;
+    padding: 253px 0 50px 0;
+    height: 100vh;
+    background-color: $color-blue;
+    &__santa {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        background: url(../img/promo/santa.png) bottom right/auto no-repeat;
+        z-index: 12;
+
+    }
+    &__stars {
+        position: absolute;
+        background: url(../img/promo/stars.svg) center center/contain no-repeat;
+        width: 1200px;
+        height: 500px;
+        top: 50px;
+        left: 53%;
+        transform: translateX(-47%);
+        z-index: 1;
+        animation: appearance 1s linear infinite alternate-reverse;
+    }
+    .container {
+        height: 100%;
+    }
+    &__wrapper {
+        padding-left: 106px;
+        height: 100%;
+        max-width: 567px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__header {
+        font-size: 72px;
+        line-height: 83px;
+    }
+    &__subheader {
+        margin-top: 20px;
+    }
+    &__btn {
+        margin-top: 20px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 186.35px;
+        height: 44px;
+        border: 2px solid #FFFFFF;
+        background: none;
+        border-radius: 20px 20px 20px 0px;
+        transition: all 0.3s ease-in-out;
+        z-index: 12;
+        &:hover {
+            background-color: #fff;
+            text-decoration: none;
+            color: rgb(20, 20, 41);
+        }
+    }
+    &__arrow {
+        position: relative;
+        width: 38px;
+        height: 38px;
+        z-index: 12;
+    }
+    &__message {
+        position: absolute;
+        right: 513px;
+        bottom: 240px;
+        padding: 61px 51px 53px 35px;
+        width: auto;
+        height: 190px;
+        background: url(../img/promo/cloud.png) center center/cover no-repeat;
+        font-size: 18px;
+        line-height: 21px;
+        color: black;
+        opacity: 0;
+        animation-name: appearance;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+    }
+}

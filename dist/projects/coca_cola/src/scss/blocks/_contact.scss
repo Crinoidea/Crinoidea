@@ -1,0 +1,96 @@
+.contact {
+    height: 100vh;
+    padding: 181px 0 161px 14px;
+    background: url(../img/contact/bg.jpg) center center/cover no-repeat;
+    background-color: black;
+    &__wrapper {
+        max-width: 468px;
+    }
+    &__form {
+        margin-top: 9px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 15;
+        textarea {
+            margin-top: 20px;
+            padding: 9px 17px;
+            width: 468px;
+            height: 76px;
+            border: 3px solid #FFFFFF;
+            border-radius: 15px;
+            background: none;
+            resize: none;
+        }
+    }
+    &__input {
+        margin-top: 20px;
+        padding: 15px 19px;
+        width: 224px;
+        height: 48px;
+        border: 3px solid #FFFFFF;
+        border-radius: 15px;
+        background: none;
+        &::-webkit-input-placeholder {
+            color: #fff;
+        }
+        &:-moz-placeholder {
+            color: #fff;
+        }
+        &::-moz-placeholder {
+            color: #fff;
+        }
+        &:-ms-input-placeholder {  
+            color: #fff;
+        }
+    }
+    &__select {
+        padding: 11px 19px;
+        background: url(../icons/select.png) 93% 50%/18px 11px no-repeat;
+        appearance: none;
+        outline: 0;
+            option {
+                background-color: #fff;
+                color: #CECECE;
+            }
+
+    }
+    &__text {
+        margin-top: 17px;
+        display: flex;
+    }
+    &__checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        &+label {
+            display: flex;
+            align-items: center;
+            &:before {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                border: 2px solid $color-red;
+                border-radius: 3px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 50% 50%;
+                transition: 0.2s all;
+            }
+        }
+        &:checked+label:before {
+            background-color: #fff;
+            background-image: url(../icons/check.svg);
+            background-size: 70% 70%;
+            background-position: 60% 50%;
+            transition: 0.2s all;
+        }
+    }
+    &__question {
+        padding-left: 7px;
+        color: $color-red;
+    }
+}

@@ -1,0 +1,98 @@
+.product {
+    height: 100vh;
+    background: url('../img/product/bg.jpg') center center/cover no-repeat;
+    padding: 190px 0px 160px 39px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        max-width: 665px;
+    } 
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 58px 39px 38px 35px;
+        width: 553px;
+        min-height: 405px;
+        border: 3px solid #FFFFFF;
+        border-radius: 20px;
+        div {
+            &:nth-child(2) {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    &__header {
+        margin-top: 9px;
+    }
+    &__subheader {
+        margin-top: 30px;
+    }
+    &__presents {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 150px;
+        width: 522px;
+        &-item {
+            position: relative;
+            z-index: 15;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 100%;
+            box-shadow: inset 4px 10px 15px rgba(0, 0, 0, 0.25);
+            height: 149.8px;
+            width: 149.8px;
+            transition: 0.5s all;
+            &:nth-child(3) {
+                padding-left: 22px;
+            }
+            &_active {
+                border: 5px solid #FFFFFF;
+                background: none;
+            }
+        }
+        &-img {
+            display: block;
+            max-width: 124px;
+            max-height: 121px;
+        }
+    }
+    &__descr {
+        font-size: 42px;
+        line-height: 49px;
+    }
+    &__text {
+        margin-top: 29px;
+        font-size: 28px;
+        line-height: 33px;
+        width: 301px;
+        font-weight: 400;
+    }
+    &__about {
+        display: block;
+        width: 150px;
+    }
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,39 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    margin: 0 auto;
+    width: 1327px;
+}
+.show {
+    display: block;
+}
+.show_flex {
+    display: flex;
+}
+.body {
+    position: relative;
+}
+.snowflake {
+    display: block;
+    position: absolute;
+    width: 523px;
+    height: 523px;
+    bottom: 40px;
+    left: -218px;
+    z-index: 5;
+    animation: flip 20s linear infinite;
+    transition: 1.5s all;
+}
+
+.snow {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: url(../img/snow.svg);
+    animation: snow 20s linear infinite;
+    z-index: 10;
+}

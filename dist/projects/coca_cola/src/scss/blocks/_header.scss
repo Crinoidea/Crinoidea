@@ -1,0 +1,72 @@
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 38px 49px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 50;
+    &__logo {
+        display: block;
+        height: 65px;
+        width: 198px;
+    }
+    &__nav {
+        margin-top: 9px;
+        margin-left: 512px;
+        width: 395px;
+        height: 19px;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+    }
+    &__item {
+        position: relative;
+        margin-top: 28px;
+        transition: 1s all;
+        &:hover {
+            transform: translate3d(0,-50%,0);
+            animation-name: hover;
+            animation-duration: 0.3s;
+            animation-iteration-count: 1;
+        }
+    }
+    &__link {
+        display: list-item;
+        margin-bottom: 22px;
+        &:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+    &__hover {
+        color: $color-red;
+        position: absolute;
+        bottom: 2px;
+
+        &:hover {
+            text-decoration: none;
+            color: $color-red;
+
+        }
+    }
+}
+@keyframes hover {
+    from {
+        transform:translate3d(0,0,0);
+    }
+    25% {
+        transform:translate3d(0,-15%,0);
+    } 
+    50% {
+        transform:translate3d(0,-25%,0);
+    }
+    75% {
+        transform:translate3d(0,-35%,0);
+    }
+    to {
+        transform:translate3d(0,-50%,0);
+    }
+}

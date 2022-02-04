@@ -1,0 +1,17 @@
+@import 'libs/bootstrap-reboot';
+@import 'libs/fonts';
+
+@import 'base/variables';
+@import 'blocks/animate';
+@import 'blocks/main';
+@import 'blocks/title';
+@import 'blocks/header';
+@import 'blocks/promo';
+@import 'blocks/menu';
+@import 'blocks/product';
+@import 'blocks/contact';
+@import 'blocks/media';
+
+.hide {
+    display: none;
+}
