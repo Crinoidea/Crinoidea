@@ -44,6 +44,11 @@
                 grid-column: unset;
             }
         }
+        &__item {
+            &:nth-child(7) {
+                grid-column: unset;
+            }
+        }
     }
     .contact {
         &__wrapper {
