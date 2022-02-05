@@ -69,7 +69,9 @@ window.addEventListener('scroll', () => {
     }
 });
 
-pageUp.addEventListener('click', () => {
+pageUp.addEventListener('click', (event) => {
+    event.preventDefault();
+
     let a = setInterval(() => {
         document.documentElement.scrollTop -= 40;
         if (document.documentElement.scrollTop == 0) {
