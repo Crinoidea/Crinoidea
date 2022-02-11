@@ -284,13 +284,8 @@
     }
     .skills {
         &__item {
-            width: 290px;
             &-descr {
                 margin-top: 16px;
-                min-width: auto;
-                &_node {
-                    margin-top: 55px;
-                }
             }
         }
     }

@@ -67,10 +67,15 @@
                 top: 14px;
             }
         }
-
+        &-link {
+            display: block;
+        }
         &-text {
             padding: 22px 0 0 43px;
-
+            span {
+                display: block;
+                margin-top: -3px;
+            }
         }
     }
 }
