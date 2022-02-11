@@ -4,41 +4,27 @@
         padding-top: 36px;
         min-height: 372px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         flex-wrap: wrap;
     }
     &__item {
         margin-top: 24px;
-        width: 370px;
-        min-height: 170px;
-        padding: 28px 20px 0 103px;
+        display: flex;
+        flex-direction: column;
+        width: 280px;
+        height: 280px;
+        padding: 30px 30px 0;
         border: 1px solid $color-black;
-        border-radius: 10px;
-        position: relative;
         &-icon {
-            position: absolute;
-            left: 27px;
-            top: 50%;
-            transform: translateY(-50%);
-            &_node {
-                left: auto;
-                right: 25px;
-                top: 26%;
-            }
-            &_js {
-                left: 17px;
-            }
+            margin: 0 auto;
         }
         &-descr {
             line-height: 16px;
+            margin-bottom: 0px;
             margin-top: 25px;
-            min-width: 225px;
-            &_node {
-                margin-top: 40px;
-            }
         }
-        &_node {
-            padding-left: 26px;
+        &-text {
+            margin-top: 20px;
         }
     }
 }
