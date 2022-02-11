@@ -33,7 +33,7 @@
 		}
 		&:last-child {
 			&:hover {
-				color: black;
+				color: $color-main;
 				transition: all 0.2s;
 			}
 		}

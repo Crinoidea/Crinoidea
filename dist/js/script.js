@@ -82,7 +82,7 @@ pageUp.addEventListener('click', (event) => {
 
 
 const links = document.querySelectorAll('.contact__link'),
-      linkWrapper = document.querySelector('.contact__social');
+      linkWrapper = document.querySelector('.contact');
 
 function addForwardAnimation() {
     links.forEach(item => {
