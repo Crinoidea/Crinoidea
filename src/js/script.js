@@ -80,3 +80,40 @@ pageUp.addEventListener('click', (event) => {
     }, 4);
 });
 
+
+const links = document.querySelectorAll('.contact__link'),
+      linkWrapper = document.querySelector('.contact__social');
+
+function addForwardAnimation() {
+    links.forEach(item => {
+        item.style.top = 50 + '%';
+        item.style.transform = 'translateY(-50%)';
+    });
+}
+
+function addBackwardAnimation() {
+    links.forEach(item => {
+        item.style.top = '';
+        item.style.transform = '';
+    });
+}
+
+if (document.documentElement.clientWidth >= 768) {
+    linkWrapper.addEventListener('mouseenter', () => {
+        addForwardAnimation();
+    });
+
+    linkWrapper.addEventListener('mouseleave', () => {
+        addBackwardAnimation();
+    });
+}
+
+if (document.documentElement.clientWidth < 768) {
+    linkWrapper.addEventListener('touchenter', () => {
+        addForwardAnimation();
+    });
+
+    linkWrapper.addEventListener('touchleave', () => {
+        addBackwardAnimation();
+    });
+}

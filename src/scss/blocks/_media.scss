@@ -50,15 +50,6 @@
             }
         }
     }
-    .contact {
-        &__wrapper {
-            padding: 0 10px;
-            grid-template-columns: 350px 550px;
-        }
-        &__form {
-            grid-template-columns: repeat(2, 260px);
-        }
-    }
     .benefit {
         &__wrapper {
             column-gap: 70px;
@@ -124,16 +115,6 @@
     }
     .contact {
         padding: 80px 0 50px;
-        &__photo {
-            display: none;
-        }
-        &__wrapper {
-            padding: 0 40px;
-            grid-template-columns: 1fr;
-        }
-        &__form {
-            grid-template-columns: repeat(2, 300px);
-        }
     }
 }
 
@@ -200,32 +181,6 @@
                 }
             }
         }
-    }
-    .contact {
-        &__wrapper {
-            padding: 0px;
-        }
-        &__trigger {
-            grid-column: unset;
-            grid-template-columns: 219px;
-            justify-content: center;
-            row-gap: 20px;
-        }
-        &__btn {
-            grid-row: 2 / 3;
-        }
-        &__policy {
-            grid-row: 1 / 2;
-            margin: 0 0 0 20px;
-        }
-        &__textarea {
-            grid-column: unset;
-        }
-        &__form {
-            grid-template-columns: repeat(auto-fill, 300px);
-            grid-template-rows: 45px 45px 143px 101px;
-        }
-        
     }
 }
 
