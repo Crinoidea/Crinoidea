@@ -4,6 +4,7 @@
     }
     .promo {
         background: url(../img/bg_promo.jpeg) center 50%/auto no-repeat;
+        background-attachment: fixed;
     }
     .about {
         background: url(../img/bg_design.jpg) 145% center/auto 100% no-repeat;
@@ -142,6 +143,7 @@
     }
     .promo {
         background: url(../img/bg_promo.jpeg) center 55%/auto no-repeat;
+        background-attachment: fixed;
         padding: 150px 0;
         min-height: 650px;
         &__header {
