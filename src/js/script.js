@@ -109,11 +109,7 @@ if (document.documentElement.clientWidth >= 768) {
 }
 
 if (document.documentElement.clientWidth < 768) {
-    linkWrapper.addEventListener('touchenter', () => {
+    linkWrapper.addEventListener('touchstart', () => {
         addForwardAnimation();
-    });
-
-    linkWrapper.addEventListener('touchleave', () => {
-        addBackwardAnimation();
     });
 }
