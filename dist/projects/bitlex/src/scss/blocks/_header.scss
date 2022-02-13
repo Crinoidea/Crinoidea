@@ -1,0 +1,56 @@
+.header {
+    min-height: 101px;
+    padding: 36px 5px;
+    &__logo {
+        display: block;
+        width: 71px;
+        height: auto;
+        img {
+            display: block;
+            width: inherit;
+            height: inherit;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__hamburger {
+        position: relative;
+        height: 19px;
+        width: 33.53px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        span {
+            display: block;
+            width: 33.53px;
+            height: 3.35px;
+            background-color: $color-blue;
+            border-radius: 1px;
+            transition: 0.5s;
+            &:last-child {
+                width: 23.72px;
+            }
+        }
+        &_active {
+            display: block;
+            span {
+                width: 23px;
+                position: absolute;
+                right: 0px;
+                top: 8.5px;
+                &:first-child {
+                    transform: rotate(135deg);
+                }
+                &:nth-child(2) {
+                    transform: rotate(45deg);
+                }
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}
