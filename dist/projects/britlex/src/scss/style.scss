@@ -23,6 +23,11 @@
     display: flex;
 }
 
+.btn {
+    background: $color-dark;
+    border-radius: 5px;
+}
+
 @import 'blocks/promo';
 @import 'blocks/title';
 @import 'blocks/btn';
