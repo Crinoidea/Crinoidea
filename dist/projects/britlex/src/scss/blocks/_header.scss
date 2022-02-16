@@ -1,16 +1,6 @@
 .header {
     min-height: 101px;
     padding: 36px 5px;
-    &__logo {
-        display: block;
-        width: 71px;
-        height: auto;
-        img {
-            display: block;
-            width: inherit;
-            height: inherit;
-        }
-    }
     &__wrapper {
         display: flex;
         justify-content: space-between;
