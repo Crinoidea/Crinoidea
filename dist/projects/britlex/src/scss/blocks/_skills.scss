@@ -7,6 +7,7 @@
         grid-template-columns: 290px;
         grid-template-rows: 600px repeat(3, minmax(473px, auto));
         row-gap: 21px;
+        place-content: center;
     }
     &__item {
         padding: 0 10px 45px;

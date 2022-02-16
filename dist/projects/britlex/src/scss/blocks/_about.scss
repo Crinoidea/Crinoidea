@@ -6,6 +6,12 @@
         grid-template-rows: 283px 161px 266px;
         row-gap: 20px;
         place-items: center;
+    }
+    &__img {
+        margin: 0 auto;
+        display: block;
+        max-width: 283px;
+        max-height: 283px;
         position: relative;
         &:before {
             content: '';
@@ -14,15 +20,9 @@
             display: block;
             width: 197px;
             height: 54px;
-            top: 10px;
-            left: 60px;
+            top: 0px;
+            left: 50px;
         }
-    }
-    &__img {
-        margin: 0 auto;
-        display: block;
-        max-width: 283px;
-        max-height: 283px;
     }
     &__count {
         margin-top: 40px;
