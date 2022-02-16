@@ -24,6 +24,9 @@
             left: 50px;
         }
     }
+    &__descr {
+        max-width: 360px;
+    }
     &__count {
         margin-top: 40px;
         list-style: none;
