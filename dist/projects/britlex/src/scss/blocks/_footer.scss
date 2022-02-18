@@ -13,12 +13,11 @@
         margin-top: 22px;
         margin-bottom: 0;
         list-style: none;
-        min-width: 295px;
+        width: 295px;
         display: flex;
         justify-content: space-between;
         position: relative;
         &:nth-child(2) {
-            
             &:before {
                 content:"•";
                 position: absolute;

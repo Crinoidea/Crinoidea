@@ -1,5 +1,283 @@
 @media (min-width: 576px) {
     .container {
         width: 540px;
+        padding: 0px 32px;
+    }
+    .logo {
+        width: 89px;
+    }
+    .title {
+        &_fz24 {
+            font-size: 30px;
+        }
+        &_fz14 {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &_fz13 {
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    .header {
+        padding: 50px 18px 0 0;
+        &__hamburger {
+            height: 24px;
+            width: 42.35px;
+            span {
+                height: 4.24px;
+                &:last-child {
+                    width: 30px;
+                }
+            }
+        }
+    }
+    .promo {
+        padding: 21px 0 95px;
+        &__wrapper {
+            grid-template-rows: 424px 231px;
+            grid-template-columns: 491px;
+            row-gap: 16px;
+        }
+        &__img {
+            div {
+                font-size: 15px;
+                &:nth-child(2) {
+                    top: 117px;
+                    left: 95px;
+                }
+                &:nth-child(3) {
+                    top: 131px;
+                    left: 297px;
+                }
+                &:nth-child(4) {
+                    top: 201px;
+                    left: 322px;
+                }
+            }
+            &_japan {
+                top: 213px;
+                left: 79px;
+                width: 33px;
+            }
+        }
+        &__header {
+            font-size: 34px;
+            line-height: 45px;
+            width: 491px;
+            span {
+                &:first-child {
+                    padding-left: 0px;
+                }
+                &:nth-child(2) {
+                    padding-right: 0px;
+                }
+            }
+        }
+        &__descr {
+            padding: 0;
+        }
+        &__btn {
+            padding: 24px 0;
+            width: 305px;
+            height: 75px;
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+    .skills {
+        padding: 28px 0 83px;
+        &__wrapper {
+            grid-template-columns: repeat(2, 240px);
+            grid-template-rows: repeat(2, 534px);
+            row-gap: 34px;
+            column-gap: 30px;
+        }
+        &__item {
+            padding: 0 15px 36px;
+            &:nth-child(2) {
+                padding-top: 5px;
+                &:before {
+                    width: 165px;
+                    height: 45px;
+                    top: 95px;
+                }
+            }
+            &:nth-child(3) {
+                padding-top: 30px;
+            }
+            &:nth-child(4) {
+                padding-top: 38px;
+                &:before {
+                    top: 18px;
+                    left: 4px;
+                }
+            }
+        }
+        &__img {
+            max-width: 206px;
+            max-height: 182px;
+        }
+        &__descr {
+            height: 194px;
+            font-size: 12px;
+            line-height: 18px;
+            color: $color-gray;
+        }
+        &__btn {
+            width: 200px;
+        }
+    }
+    .about {
+        padding: 28px 0px 131px;
+        &__wrapper {
+            grid-template-rows: 352px 103px 65px;
+            row-gap: 30px;
+            place-items: center;
+        }
+        &__img {
+            max-width: 352px;
+            max-height: 352px;
+            &:before {
+                width: 255px;
+                height: 66px;
+                top: 0px;
+                left: 50px;
+            }
+        }
+        &__descr {
+            max-width: 500px;
+        }
+        &__count {
+            margin-top: 0;
+            flex-direction: row;
+            width: 423px;
+            margin-bottom: 0;
+        }
+    }
+    .price {
+        padding-bottom: 162px;
+        &__item {
+            width: 400px;
+            min-height: 427px;
+            &:nth-child(2) {
+                &:before {
+                    top: 17px;
+                    left: 174px;
+                }
+            }
+            &:nth-child(3) {
+                &:before {
+                    top: 81px;
+                    left: 210px;
+                }
+            }
+        }
+        &__img {
+            max-height: 291px;
+            max-width: 291px;
+        }
+        &__subheader {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        &__descr {
+            margin-top: 23px;
+            max-width: 355px;
+        }
+        &__cost {
+            margin-top: 36px;
+            padding: 0 12px 0 23px;
+            width: 205px;
+            height: 45px;
+            &-num {
+                font-size: 22px;
+                line-height: 33px;
+            }
+            &-month {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+    .contact {
+        padding: 29px 0 119px;
+        &__wrapper {
+            margin-top: 110px;
+        }
+        &__img {
+            max-width: 358px;
+            max-height: 322px;
+            &:before {
+                width: 66px;
+                height: 148px;
+                bottom: 41px;
+            }
+            &:after {
+                width: 44px;
+                height: 93px;
+                left: 310px;
+            }
+        }
+        &__descr {
+            padding: 0;
+            max-width: 380px;
+            span {
+                display: inline;
+            }
+        }
+        &__form {
+            flex-direction: row;
+            justify-content: end;
+            width: 512px;
+            position: relative;
+            input {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 60px;
+                width: 330px;
+                font-size: 13px;
+                line-height: 19px;
+                z-index: 1;
+            }
+            &-btn {
+                margin-top: 0;
+                width: 193px;
+                font-size: 16px;
+                line-height: 24px;
+                z-index: 10;
+            }
+        }
+    }
+    .footer {
+        padding-bottom: 26px;
+        .logo {
+            margin-top: 0;
+        }
+        &__wrapper {
+            margin-top: 24px;
+            flex-direction: row;
+        }
+        &__list {
+            margin: 0;
+            width: 324px;
+            &:nth-child(2) {
+                &:before {
+                    font-size: 12px;
+                    top: 9px;
+                    left: 137px;
+                }
+                &:after {
+                    font-size: 12px;
+                    top: 9px;
+                    left: 234px;
+                }
+            }
+        }
+        &__link {
+            font-size: 12px;
+            line-height: 18px;
+        }
     }
 }

@@ -9,9 +9,10 @@
         justify-content: center;
     }
     &__img {
+        margin: 0 auto;
         position: relative;
         &_main {
-            width: 100%;
+            width: auto;
             height: 100%;
         }
         div {
@@ -37,9 +38,10 @@
             display: block;
             height: auto;
             width: 23px;
+            box-shadow: none;
         }
     }
-    &__text {
+    &__item {
         display: flex;
         justify-content: space-between;
         flex-direction: column;

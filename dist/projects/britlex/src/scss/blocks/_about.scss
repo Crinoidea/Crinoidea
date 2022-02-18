@@ -34,9 +34,19 @@
         height: 100%;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     &__number {
-        font-weight: 24px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 24px;
+        color: $color-dark;
     }
     &__text{
         margin-top: 5px;
