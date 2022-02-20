@@ -37,9 +37,12 @@
         }
     }
     &__img {
-        display: block;
         max-height: 248px;
         max-width: 248px;
+        img {
+            max-width: inherit;
+            max-height: inherit;
+        }
     }
     &__subheader {
         margin-top: 28px;

@@ -1,13 +1,13 @@
 .contact {
     padding: 29px 5px 57px;
     &__wrapper {
-        margin-top: 66px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
     }
     &__img {
+        margin-top: 66px;
         max-width: 253px;
         max-height: 228px;
         position: relative;
