@@ -28,6 +28,9 @@
             filter: contrast(120%) saturate(110%);
             transform: scale(1.10);
         }
+        &:nth-child(5) {
+            border: 2px solid $color-black;
+        }
         &:nth-child(7) {
             grid-column: 1 / 3;
         }
