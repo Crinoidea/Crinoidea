@@ -1,6 +1,9 @@
 .header {
     min-height: 101px;
     padding: 36px 5px;
+    background-color: #fff;
+    position: relative;
+    z-index: 30;
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -9,7 +12,7 @@
     &__hamburger {
         position: relative;
         height: 19px;
-        width: 33.53px;
+        width: 34px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -17,12 +20,12 @@
         span {
             display: block;
             width: inherit;
-            height: 3.35px;
+            height: 3px;
             background-color: $color-blue;
             border-radius: 1px;
             transition: 0.5s;
             &:last-child {
-                width: 23.72px;
+                width: 24px;
             }
         }
         &_active {
