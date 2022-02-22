@@ -35,17 +35,28 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        scroll-behavior: smooth;
     }
     &__item {
         color: $color-dark;
         font-weight: 500;
         font-size: 22px;
         line-height: 65px;
+        a {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            color: inherit;
+            &:hover {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
     }
     &__btn {
-        margin: 0 auto;
+        display: block;
         margin-top: 39px;
-        padding: 15px 0;
+        padding: 15px 100px;
         width: 291px;
         height: 65px;
         border: 2px solid $color-dark;
@@ -53,6 +64,10 @@
         font-size: 20px;
         line-height: 30px;
         background-color: #fff;
+        color: black;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 .overlay {

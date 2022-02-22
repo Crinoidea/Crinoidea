@@ -3,7 +3,8 @@
 const overlay = document.querySelector('.overlay'),
       hamburger = document.querySelector('.header__hamburger'),
       menu = document.querySelector('.menu'),
-      header = document.querySelector('.header');
+      header = document.querySelector('.header'),
+      arr = [overlay, hamburger, menu, header];
 
 
 function addActiveClass(element) {
@@ -17,33 +18,42 @@ function removeActiveClass(element) {
     document.body.style.overflow = '';
 }
 
+function openMenu() {
+    arr.forEach(item => {
+        addActiveClass(item);
+    })
+}
+function closeMenu() {
+    arr.forEach(item => {
+        removeActiveClass(item);
+    })
+}
 
 function actionsWithMenu(trigger) {
     trigger.addEventListener('click', (event) => {
         const e = event.currentTarget;
 
         if (!e.classList.contains('header__hamburger_active')) {
-            addActiveClass(overlay);
-            addActiveClass(hamburger);
-            addActiveClass(menu);
-            addActiveClass(header);
+            openMenu();
         } else {
-            removeActiveClass(overlay);
-            removeActiveClass(hamburger);
-            removeActiveClass(menu);
-            removeActiveClass(header);
+            closeMenu();
         }
     })
+
+    overlay.addEventListener('click', (event) => {
+        if (event.target == overlay || event.target == overlay) {
+            closeMenu();
+        }
+    });
+    
+    menu.addEventListener('click', (event) => {
+        console.dir(event.target);
+        if (event.target.tagName == 'A') {
+            closeMenu();
+        }
+    });
 }
 
-overlay.addEventListener('click', (event) => {
-    if (event.target == overlay) {
-        removeActiveClass(overlay);
-        removeActiveClass(hamburger);
-        removeActiveClass(menu);
-        removeActiveClass(header);
-    }
-});
 actionsWithMenu(hamburger);
 
 
