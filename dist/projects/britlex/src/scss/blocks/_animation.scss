@@ -1,0 +1,46 @@
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes move_y {
+    to {
+        transform: translateY(3px);	
+    }
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+@keyframes move_cloud {
+    33% {
+        transform: translateX(-20px);
+    }
+    66% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes wind {
+    33% {
+        transform: rotate(-5deg);
+    }
+    66% {
+        transform: rotate(0deg);
+    }
+    to {
+        transform-origin: bottom center ;
+        transform: rotate(5deg);
+    }
+
+}

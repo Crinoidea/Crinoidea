@@ -21,14 +21,18 @@
             &:nth-child(2) {
                 top: 83px;
                 left: 68px;
+                animation: blink 2s alternate infinite;
             }
             &:nth-child(3) {
                 top: 93px;
                 left: 210px;
+                animation: blink 2s alternate infinite 1s;
+
             }
             &:nth-child(4) {
                 top: 142px;
                 left: 228px;
+                animation: blink 2s alternate infinite;
             }
         }
         &_japan {
@@ -39,6 +43,7 @@
             height: auto;
             width: 23px;
             box-shadow: none;
+            animation: blink 2s alternate infinite;
         }
     }
     &__item {

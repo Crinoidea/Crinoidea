@@ -443,6 +443,7 @@
                 height: 60px;
                 top: 62px;
                 left: 232px;
+                animation: blink 1s alternate infinite;
             }
         }
         &__descr {
@@ -576,8 +577,8 @@
                     width: 120px;
                 }
                 &:before {
-                    top: 68px;
-                    left: 85px;
+                    top: 64px;
+                    left: 89px;
                     font-size: 20px;
                 }
             }
@@ -586,8 +587,8 @@
                     width: 120px;
                 }
                 &:before {
-                    top: 57px;
-                    left: 112px;
+                    top: 51px;
+                    left: 116px;
                     font-size: 20px;
                 }
             }

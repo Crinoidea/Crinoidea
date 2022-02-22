@@ -25,6 +25,8 @@
             height: 105px;
             bottom: 23px;
             left: 8px;
+            animation: wind 3s alternate infinite 2s;
+
         }
         &:after {
             content: '';
@@ -35,6 +37,8 @@
             height: 66px;
             bottom: 23px;
             left: 210px;
+            animation: wind 3s alternate infinite;
+
         }
     }
     &__descr {

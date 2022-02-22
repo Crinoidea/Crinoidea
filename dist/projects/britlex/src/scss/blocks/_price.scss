@@ -23,6 +23,7 @@
                 left: 121px;
                 font-size: 25px;
                 font-weight: 400;
+                animation: blink 1s ease-in-out alternate infinite;
             }
         }
         &:nth-child(3) {
@@ -33,6 +34,8 @@
                 left: 153px;
                 font-size: 25px;
                 font-weight: 400;
+                animation: blink 1s ease-in-out alternate infinite 2s;
+
             }
         }
     }
