@@ -765,18 +765,25 @@
             align-items: center;
             padding: 0;
         }
-        &__nav {
-            width: 415px;
-        }
         &__list {
             margin: 0;
-            width: 100%;
+            width: 415px;
+            height: inherit;
             flex-direction: row;
-            height: 24px;
+            align-items: center;
         }
         &__item {
+            display: flex;
+            align-items: center;
             font-size: 16px;
             line-height: 24px;
+            height: inherit;
+            cursor: pointer;
+            transition: 0.3s all;
+            &:hover {
+                transform: rotate(360deg);
+                font-size: 20px;
+            }
         }
         &__btn {
             margin: 0;
@@ -1069,15 +1076,16 @@
     .menu {
         height: 70px;
         width: 950px;
-        &__nav {
-            width: 520px;
-        }
         &__list {
+            width: 520px;
             height: 30px;
         }
         &__item {
             font-size: 20px;
             line-height: 30px;
+            &:hover {
+                font-size: 24px;
+            }
         }
         &__btn {
             width: 220px;
