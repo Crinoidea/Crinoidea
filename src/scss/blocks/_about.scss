@@ -2,11 +2,10 @@
     padding-top: 120px;
     &__wrapper {
         display: grid;
-        min-height: 600px;
+        min-height: 400px;
         margin: 0 auto;
         grid-template-columns: 400px 540px;
-        grid-template-rows: mixmax(225px, auto) ;
-        grid-auto-rows: mixmax(230px, auto);
+        grid-template-rows: 400px;
         column-gap: 80px;
     }
     &__photo {
