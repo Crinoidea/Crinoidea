@@ -1,11 +1,13 @@
 .skills {
     padding-top: 100px;
     &__wrapper {
+        margin: 0 auto;
         padding-top: 36px;
         min-height: 372px;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        max-width: 1000px;
     }
     &__item {
         margin-top: 24px;
