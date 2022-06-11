@@ -28,31 +28,43 @@ percents.forEach( (item, i) => {
 });
 
 /* scroll to a section */
-const promo = document.getElementById('promo'),
-      about = document.getElementById('about'),
-      benefit = document.getElementById('benefit'),
-      skills = document.getElementById('skills'),
-      portfolio = document.getElementById('portfolio'),
-      contact = document.getElementById('contact'),
+let linksScroll = document.querySelectorAll('[href^="#"]'),
+    speed = 0.2;
 
-      menuLinks = document.querySelectorAll('.menu__link'),
-      promoLinks = document.querySelectorAll('.promo__link');
+linksScroll.forEach(item => {
+    item.addEventListener('click', function(event) {
+        event.preventDefault();
 
-function smoothScroll (wrapper, section, numberOfLink) {
-    wrapper[numberOfLink].addEventListener('click', (e) => {
-        e.preventDefault();
-        menu.classList.remove('active');
-        section.scrollIntoView({block:'start', behavior: "smooth"});
-    });
-}
+        let heightTop = document.documentElement.scrollTop, // scrolled px from top 
+            hash = this.hash,
+            toBlock = document.querySelector(hash).getBoundingClientRect().top, // distance from one element to another
+            start = null;
+            elementPosition = heightTop + toBlock; // element`s position from top
 
-smoothScroll(menuLinks, about, 0);
-smoothScroll(menuLinks, benefit, 1);
-smoothScroll(menuLinks, skills, 2);
-smoothScroll(menuLinks, portfolio, 3);
-smoothScroll(menuLinks, contact, 4);
-smoothScroll(promoLinks, portfolio, 0);
-smoothScroll(promoLinks, about, 1);
+        requestAnimationFrame(frame);
+
+        function frame(time) {
+            if (start === null) {
+                start = time;
+            }
+
+            let progress = time - start,
+                r = (toBlock < 0 ? Math.max(heightTop - progress / speed, elementPosition) : Math.min(heightTop + progress / speed, elementPosition));
+
+            document.documentElement.scrollTo(0, r);
+
+            if (r != elementPosition) {
+                requestAnimationFrame(frame);
+            } else {
+                location.hash = hash;
+            }
+        }
+
+        if (this == event.target && menu.classList.contains('active')) {
+            menu.classList.remove('active');
+        }
+    })
+})
 
 
 //scroll to top
