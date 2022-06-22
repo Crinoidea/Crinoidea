@@ -30,7 +30,6 @@ percents.forEach( (item, i) => {
 /* scroll to a section */
 let linksScroll = document.querySelectorAll('[href^="#"]'),
     speed = 0.2;
-
 linksScroll.forEach(item => {
     item.addEventListener('click', function(event) {
         event.preventDefault();
