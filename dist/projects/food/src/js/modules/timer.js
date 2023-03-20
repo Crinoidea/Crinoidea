@@ -1,9 +1,9 @@
 function timer(id) {
     // Timer 23 days
 
-    const day23 = 23.45 * 24 * 1000 * 60 * 60,
-          deadline = Date.parse(new Date()) + day23;
-
+    const hours12 = 12 * 1000 * 60 * 60,
+          deadline = Date.parse(new Date()) + hours12;
+    console.log(deadline)
     function getDifferenceInTime (endTime) {
         const t = endTime - Date.parse(new Date()),
                 days = Math.floor(t / (1000 * 60 * 60 * 24)),
