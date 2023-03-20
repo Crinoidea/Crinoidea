@@ -48,4 +48,10 @@
         font-size: 20px;
         color: rgb(199, 198, 198);
     }
+    &__react {
+        padding-top: 20px;
+        a {
+            color:$color-main;
+        }
+    }
 }
